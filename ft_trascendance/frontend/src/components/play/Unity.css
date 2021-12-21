@@ -1,0 +1,19 @@
+.UnityGame
+{
+    position: absolute;
+    height: 40%;
+    width: 70%;
+    left: 10vw;
+    top: 30vh;
+    opacity: 1;
+}
+
+.UnityMap
+{
+    position: absolute;
+    height:40%;
+    width: 80%;
+    left: 5%;
+    top: 26.5vh;
+    opacity: 1;
+}

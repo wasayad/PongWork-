@@ -1,0 +1,201 @@
+@font-face {
+    font-family: "neon";
+    src: url("../home/font/NeonSans.ttf") format("truetype");
+}
+
+body {
+    margin: 0px;
+    font-family: "Vibur", sans-serif;
+}
+
+.navBar {
+    background-color: black;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    place-content: space-between;
+}
+
+.navBtn {
+    background-color: transparent;
+    border: 0px;
+    height: inherit;
+    width: 5rem;
+    color: aqua;
+    cursor: pointer;
+}
+
+.neonTextOn {
+    animation: flicker 1.5s infinite alternate;
+  color: #fff;
+}
+
+/* Flickering animation */
+@keyframes flicker {
+    
+    0%, 18%, 22%, 25%, 53%, 57%, 100% {
+  
+        text-shadow:
+        0 0 4px #fff,
+        0 0 11px #fff,
+        0 0 19px #fff,
+        0 0 40px #0fa,
+        0 0 80px #0fa,
+        0 0 90px #0fa,
+        0 0 100px #0fa,
+        0 0 150px #0fa;
+    }
+    
+    20%, 24%, 55% {        
+        text-shadow: none;
+    }    
+  }
+
+  .neonTextOff {
+    color: #fff;
+  }
+    
+h1 {
+    font-family: neon;
+    font-size: 1.2rem;
+    text-align: center;
+    text-transform: uppercase;
+    margin: 0px;
+}
+
+/*.navProfile {
+    display: flex;
+    width: 2.5rem;
+    height: 2.5rem;
+    margin-right: 20px;
+    margin-left: 20px;
+    border-radius: 50%;
+    cursor: pointer;
+    object-fit: cover;
+    box-shadow: 0 0 7px #fff, 0 0 10px #fff, 0 0 21px #0fa, 0 0 42px #0fa;
+}*/
+
+input.searchBar {
+    border-radius: 15px;
+    padding-left: 10px;
+    height: 1.5rem;
+    border: 0px;
+    margin-left: 20px;
+}
+
+.prof-search {
+  display: flex;
+  height: 50px;
+  width: 5rem;
+  align-items: center;
+  place-content: flex-end;
+  z-index: 2;
+}
+
+
+:root {
+    --primColor: #dcdcdc;
+    --secoColor: #555555;
+    --cornerRad: 4px;
+  }
+  body {
+    background-color: var(--primColor);
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 20px;
+  }
+  details {
+    margin: 10px;
+  }
+  summary {
+    text-align: center;
+    width: 40px;
+    height: 40px;
+    background-size: cover;
+    background-position: center;
+    border-radius: 50%;
+    box-shadow: 0 0 7px #fff, 0 0 10px #fff, 0 0 21px #0fa, 0 0 42px #0fa;
+    cursor: pointer;
+    outline: none;
+    transition: transform 200ms ease-in-out 0s;
+}
+summary::before,
+summary::after {
+    position: static;
+    top: 0;
+    left: 0;
+  }
+  
+  summary:hover {
+    transform: scale(1.1);
+  }
+  summary::marker {
+    font-size: 0;
+  }
+  summary::-webkit-details-marker {
+    display: none;
+  }
+  details[open] .menu {
+    animation-name: menuAnim;
+  }
+  
+  .menu {
+    width: fit-content;
+    border-radius: var(--cornerRad);
+    background-color: var(--primColor);
+    box-shadow: 0 4px 12px 0 rgba(0, 0, 0, 0.2);
+    margin-top: 8px;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    animation: closeMenu 300ms ease-in-out forwards;
+  }
+  .menu .menuBtn {
+    padding: 12px 24px;
+    border: 0;
+    background: transparent;
+    font-size: inherit;
+    margin: 0 16px;
+    color: var(--secoColor);
+    border-bottom: 2px solid rgba(0, 0, 0, 0.1);
+    text-decoration: none;
+    text-align: center;
+    transition: filter 200ms linear 0s;
+}
+  .menu .menuBtn:nth-last-of-type(1) {
+    border-bottom: none;
+  }
+  .menu .menuBtn:hover {
+    filter: brightness(200%);
+  }
+  @keyframes menuAnim {
+    0% {
+      height: 0;
+    }
+    100% {
+      height: 187.2px;
+    }
+  }
+  @keyframes fadeMe {
+    0% {
+      height: 145.6px;
+    }
+    100% {
+      height: 0;
+    }
+  }
+  
+  nav.menu {
+    position: absolute;
+    transform: translateX(-68%);
+}
+
+.Notification {
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  background-color: #ff0000b0;
+  border-radius: 50%;
+  top: 5px;
+  z-index: 2;
+  right: 10px;
+}
